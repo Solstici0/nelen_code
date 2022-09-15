@@ -98,7 +98,7 @@ if __name__=='__main__':
     for odrv_name in odrv_d:
         # dump errors
         logger.info('Dumping errors for %s odrive: %s',odrv_name,
-                dump_errors(odrv_s[odrv_name]))
+                dump_errors(odrv_d[odrv_name]))
         dump_errors(odrv_d[odrv_name], True)
         
         # calibrate
