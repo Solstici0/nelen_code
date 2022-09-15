@@ -10,7 +10,7 @@ from utils import exceptions
 
 from logging.logging import logger
 
-logger = logger.getChild(__name__)
+#logger = logger.getChild(__name__)
 
 
 def calibrate(axis):
