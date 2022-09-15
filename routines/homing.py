@@ -11,20 +11,6 @@ from logger.logger import logger
 
 #logger = logger.getChild(__name__)
 
-# Im doing this very unconfortable code, bc logging is not workin
-# in the raspy
-#class logger():
-#    def __init__(self):
-#        pass
-#
-#    def info(msg: dict):
-#        return(print(msg))
-#
-#    def debug(msg: dict):
-#        return(print(msg))
-
-#logger = logger()
-
 def calibrate(axis):
     """
     Calibrate and start control of a given axis.
