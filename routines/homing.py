@@ -84,7 +84,7 @@ def calibrate(axis):
 #     odrvh.axis0.controller.move_incremental(offset_h_stg, False)
 #     time.sleep(5)
 
-if __name__=='__init__':
+if __name__=='__main__':
     import argarse
     parser = argparse.ArgumentParser(description="Nelen homing",
                         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
