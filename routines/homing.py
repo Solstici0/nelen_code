@@ -113,7 +113,7 @@ if __name__=='__init__':
             logger.info('Working on codo')
             calibrate(odrvc.axis1)
             logger.info('hombro calibrated')
-        elif odrv = 'hombro':
+        elif odrv == 'hombro':
             ## Hombro
             logger.info('Working on Hombro')
             calibrate(odrvh.axis0)
