@@ -85,7 +85,7 @@ def calibrate(axis):
 #     time.sleep(5)
 
 if __name__=='__main__':
-    import argarse
+    import argparse
     parser = argparse.ArgumentParser(description="Nelen homing",
                         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("-j", "--joint", type=str, required=True,
