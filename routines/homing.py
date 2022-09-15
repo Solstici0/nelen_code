@@ -1,4 +1,3 @@
-#!/home/rosconcoco/nelen/bin/python
 import time
 
 import odrive
@@ -8,7 +7,7 @@ from odrive.utils import *
 from config import config
 from utils import exceptions
 
-from logging.logging import logger
+from logging.log import logger
 
 #logger = logger.getChild(__name__)
 
