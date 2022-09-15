@@ -15,7 +15,7 @@ ch.setFormatter(formatter)
 logger.addHandler(ch)
 
 # file handler
-file_name = os.path.join('src', 'last_experiment.log')
+file_name = os.path.join('logger', 'last_experiment.log')
 try:
     os.mknod(file_name)
     print("Empty last_experiment.log created!")
