@@ -2,7 +2,7 @@ import os
 import yaml
 import logging
 
-logger = logging.getLogger("BioNet")
+logger = logging.getLogger("NELEN-SCARA")
 logger.setLevel(logging.DEBUG)
 formatter = logging.Formatter(
          "%(asctime)s - %(name)s:%(lineno)s - %(levelname)s - %(message)s"
