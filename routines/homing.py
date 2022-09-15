@@ -102,7 +102,7 @@ if __name__=='__main__':
         dump_errors(odrv_d[odrv_name], True)
         
         # calibrate
-        if odrv == 'codo-muneca':
+        if odrv_name == 'codo-muneca':
             #Z
             logger.info('Working on z')
             calibrate(odrv_d[odrv_name].axis0)
@@ -112,7 +112,7 @@ if __name__=='__main__':
             logger.info('Working on codo')
             calibrate(odrv_d[odrv_name].axis1)
             logger.info('hombro calibrated')
-        elif odrv == 'hombro':
+        elif odrv_name == 'hombro':
             ## Hombro
             logger.info('Working on Hombro')
             calibrate(odrv_d[odrv_name].axis0)
