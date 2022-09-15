@@ -1,5 +1,5 @@
-from nelen_code.config.enums_dict import *
-from nelen_code.config  import config 
+from config.enums_dict import *
+from config  import config 
 import time
 
 #timeouts
