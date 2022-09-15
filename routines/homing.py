@@ -82,15 +82,15 @@ if __name__=='__main__':
     # odrv radio cubito, axis 0->Z, 1->codo
     odrv_d = {}
     if joint_to_calibrate == 'all':
-        odrv['codo-muneca'] = odrive.find_any(
+        odrv_d['codo-muneca'] = odrive.find_any(
                 serial_number=config.rc_serial) # codo and z
-        odrv['hombro'] = odrive.find_any(
+        odrv_d['hombro'] = odrive.find_any(
                 serial_number=config.hombro_serial) # hombro
     elif joint_to_calibrate in ['codo', 'z']:
-        odrv['codo-muneca'] = odrive.find_any(
+        odrv_d['codo-muneca'] = odrive.find_any(
                 serial_number=config.rc_serial) # codo and z
     elif joint_to_calibrate == 'hombro':
-        odrv['hombro'] = odrive.find_any(
+        odrv_d['hombro'] = odrive.find_any(
                 serial_number=config.hombro_serial) # hombro
     else:
         raise KeyError(f'there is no {joint_to_calibrate} joint')
@@ -104,17 +104,17 @@ if __name__=='__main__':
         if odrv == 'codo-muneca':
             #Z
             logger.info('Working on z')
-            calibrate(odrvc.axis0)
+            calibrate(odrv_d[odrv].axis0)
             logger.infoprint('z calibrated')
 
             #codo
             logger.info('Working on codo')
-            calibrate(odrvc.axis1)
+            calibrate(odrv_d[odrv].axis1)
             logger.info('hombro calibrated')
         elif odrv == 'hombro':
             ## Hombro
             logger.info('Working on Hombro')
-            calibrate(odrvh.axis0)
+            calibrate(odrv_d[odrv].axis0)
             logger.info('hombro calibrated')
     logger.info("End calibration")
 
