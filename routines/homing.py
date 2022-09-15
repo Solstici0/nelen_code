@@ -77,11 +77,7 @@ if __name__=='__init__':
     parser = argparse.ArgumentParser(description="Nelen homing",
                         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("-j", "--joint", type=str, required=True,
-            help="Joint to calibrate:" \ 
-                    "hombro," \
-                    "codo," \ 
-                    "z," \
-                    "all")
+            help="Joint to calibrate: hombro, codo, z or all")
     args = parser.parse_args()
     joint_to_calibrate = args.joint
   
