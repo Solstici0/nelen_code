@@ -7,23 +7,23 @@ from odrive.utils import *
 from config import config
 from utils import exceptions
 
-#from log.log import logger
+from logger.logger import logger
 
 #logger = logger.getChild(__name__)
 
 # Im doing this very unconfortable code, bc logging is not workin
 # in the raspy
-class logger():
-    def __init__(self):
-        pass
+#class logger():
+#    def __init__(self):
+#        pass
+#
+#    def info(msg: dict):
+#        return(print(msg))
+#
+#    def debug(msg: dict):
+#        return(print(msg))
 
-    def info(msg: dict):
-        return(print(msg))
-
-    def debug(msg: dict):
-        return(print(msg))
-
-logger = logger()
+#logger = logger()
 
 def calibrate(axis):
     """
