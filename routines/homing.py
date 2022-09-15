@@ -6,8 +6,8 @@ import odrive
 from odrive.enums import * 
 from odrive.utils import *
 
-from nelen_code.config import config
-from nelen_code.utils import exceptions
+from config import config
+from utils import exceptions
 odrvc = odrive.find_any(serial_number=config.rc_serial) # codo and z
 odrvh = odrive.find_any(serial_number=config.hombro_serial) # hombro
 
