@@ -94,27 +94,28 @@ if __name__=='__main__':
                 serial_number=config.hombro_serial) # hombro
     else:
         raise KeyError(f'there is no {joint_to_calibrate} joint')
-
-    for odrv_name in odrv_d:
-        logger.info('Dumping errors for %s odrive: %s',odrv_name,
-                dump_errors(odrvc))
-        dump_errors(odrv[odrv_name], True)
     
-    for odrv in odrv_d:
+    for odrv_name in odrv_d:
+        # dump errors
+        logger.info('Dumping errors for %s odrive: %s',odrv_name,
+                dump_errors(odrv_s[odrv_name]))
+        dump_errors(odrv_d[odrv_name], True)
+        
+        # calibrate
         if odrv == 'codo-muneca':
             #Z
             logger.info('Working on z')
-            calibrate(odrv_d[odrv].axis0)
+            calibrate(odrv_d[odrv_name].axis0)
             logger.infoprint('z calibrated')
 
             #codo
             logger.info('Working on codo')
-            calibrate(odrv_d[odrv].axis1)
+            calibrate(odrv_d[odrv_name].axis1)
             logger.info('hombro calibrated')
         elif odrv == 'hombro':
             ## Hombro
             logger.info('Working on Hombro')
-            calibrate(odrv_d[odrv].axis0)
+            calibrate(odrv_d[odrv_name].axis0)
             logger.info('hombro calibrated')
     logger.info("End calibration")
 
